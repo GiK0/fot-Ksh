@@ -1,0 +1,43 @@
+#include <iostream>
+#include <string.h>
+
+using namespace std;
+
+int main()
+{
+	setlocale(0, "RUS");
+	const int n = 5;
+	int nomer;
+	char mas1[n][20] = { "Хроль", "Топчи", "Петель", "Соляник", "Назаренко" };
+	char name[n][10];
+	int i, j;
+	for (int i = 0; i < n; i++)
+		cout << mas1[i];
+	cout << '\n';
+
+	cout << "введите номер: ";
+	cin >> nomer;
+
+	for (i = 0; i < nomer; i++)
+	{
+
+		for (j = 0; j < nomer; j++)
+		{
+			if (strcmp(mas1[j], mas1[j + 1]) > 0)
+			{
+				char nomer[10];
+				strcpy_s(nomer, mas1[j]);
+				strcpy_s(mas1[j], mas1[j + 1]);
+				strcpy_s(mas1[j + 1], nomer);
+			}
+		}
+	}
+	for (int i = 0; i < n; i++)
+		strcpy_s(name[i], mas1[i]);
+	for (int i = 0; i < n; i++)
+		cout << name[i] << "\n";
+
+
+	system("pause");
+	return 0;
+}
