@@ -1,0 +1,30 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+int nsum(int x)
+{
+	int sum;
+	sum = x / 10 + x % 10;
+	return sum;
+}
+
+int main()
+{
+	int a, b;
+	int sumA;
+	int sumB;
+	cout << "enter the A: ";
+	cin >> a;
+	sumA = nsum(a);
+	cout << sumA << '\n';
+	cout << "entre the B: ";
+	cin >> b;
+	sumB = nsum(b);
+	cout << sumB << '\n';
+
+
+	system("pause");
+	return 0;
+
+}
