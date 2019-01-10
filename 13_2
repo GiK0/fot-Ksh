@@ -1,0 +1,48 @@
+#include <iostream>
+#include <ctime>
+
+using namespace std;
+
+void sum(int n, int x[], int y[], int z[])
+{
+	for (int j = 0; j < n; j++)
+	{
+		z[j] = x[j] + y[j];
+	}
+}
+void chisla(int n, int x[])
+{
+	for (int i = 0; i < n; i++)
+	{
+		x[i] = rand() % 25;
+		cout << x[i] << " ";
+	}
+}
+void vivodOtveta(int n, int *z)
+{
+	for (int i = 0; i < n; i++)
+		cout << z[i] << " ";
+}
+
+int main()
+{
+	srand(time(NULL));
+	int const n = 7;
+	int x[n], y[n], z[n];
+	chisla(n, x);
+	cout << "x" << endl;
+
+	chisla(n, y);
+	cout << "y" << endl;
+	
+	sum(n, x, y, z);
+	vivodOtveta (n, z);
+cout << "z = x + y" << endl;
+
+
+
+	
+	system("pause");
+	return 0;
+
+}
