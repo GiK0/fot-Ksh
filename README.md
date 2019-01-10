@@ -1,1 +1,1 @@
-# fot-Ksh
+# for-Ksh
