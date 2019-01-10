@@ -1,0 +1,64 @@
+#include <iostream>
+#include <string>
+#include <sstream>
+using namespace std;
+
+
+struct VINCH
+{
+	char proizvod[15];
+	int obiem;
+	int skorost;
+	double SES;
+	int mas[5];
+};
+
+int main()
+{
+	const int col = 3;
+	VINCH VINCH1[col];
+	cout << "\n Enter the data:\n";
+
+
+	for (int i = 0; i < col; i++)
+	{
+		cout << "proizvoditel: ";
+		cin >> VINCH1[i].proizvod;
+
+		cout << "obiem: ";
+		cin >> VINCH1[i].obiem;
+
+		cout << "skorost: ";
+		cin >> VINCH1[i].skorost;
+		
+
+	}
+	
+			
+		int v;
+			cout << "Enter nujni obiem diska: ";
+			cin >> v;
+			cout << "\n";
+
+			for (int j = 0; j < col; j++)
+			{
+
+				if (v == (VINCH1[j].obiem))
+				{
+					cout << "proizvoditel: ";
+					cout << VINCH1[j].proizvod << '\n';
+
+					cout << "obiem: ";
+					cout << VINCH1[j].obiem << '\n';
+
+					cout << "skorost: ";
+					cout << VINCH1[j].skorost << '\n';
+					
+					cout << "\n";
+				}
+				else
+					cout << "NO";
+			}
+	system("pause");
+	return 0;
+}
