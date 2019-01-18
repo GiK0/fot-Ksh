@@ -1,0 +1,22 @@
+#include <iostream> 
+#include <string> 
+
+using namespace std;
+int main()
+{
+	setlocale(0, "RUS");
+	string  str = "";
+	string result = "";
+	do
+	{
+		cout << "введите строку(до 10 символов): " << '\n';
+		cin >> str;
+		result += str;
+
+	} 
+while (result.length() = 50);
+	cout << result << endl;
+  
+	system("pause");
+	return 0;
+}
