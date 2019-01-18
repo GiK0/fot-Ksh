@@ -1,0 +1,36 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+
+
+int main()
+	{
+	double n, s= 0 ;
+
+	int k = 1;
+	cout << "число: ";
+	cin >> n;
+	
+	
+
+	
+	while (k <= n)
+	{
+		if ( k != 7) 
+		{
+		double f = 1 ,j;
+		for (j=1; j<=n-k; j++)
+			f=f*j;
+		s+=(pow((-1),k)*(k-7))/(2*f);
+		k++;
+		}
+		
+	}
+	
+
+	
+	cout << s;
+	system ("pause");
+	return 0;
+}
